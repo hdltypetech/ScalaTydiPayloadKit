@@ -20,7 +20,7 @@ object ToTydiBinary {
         case None => false.toBinary.concat(TydiBinary(0, A.binSize))
       }
     }
-    val binSize = 1
+    val binSize = 1 + A.binSize
   }
 
   implicit val boolToTydiBinary: ToTydiBinary[Boolean] = new ToTydiBinary[Boolean] {
